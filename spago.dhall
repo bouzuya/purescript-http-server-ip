@@ -5,7 +5,12 @@ You can edit this file as you like.
 { name =
     "my-project"
 , dependencies =
-    [ "bouzuya-http-server", "console", "effect", "psci-support", "test-unit" ]
+    [ "arraybuffer"
+    , "bouzuya-http-server"
+    , "psci-support"
+    , "simple-json"
+    , "test-unit"
+    ]
 , packages =
     ./packages.dhall
 }

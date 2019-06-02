@@ -23,6 +23,7 @@
     "purs": "purs",
     "repl": "spago repl",
     "spago": "spago",
+    "start": "spago run",
     "test": "spago test"
   }
 }
