@@ -33,6 +33,7 @@ stringToUint8Array =
 
 app :: Request -> Aff Response
 app { headers } = do
+  -- TODO: request.remoteAddress
   let
     host =
       Maybe.maybe
