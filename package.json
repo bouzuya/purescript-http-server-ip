@@ -1,0 +1,28 @@
+{
+  "name": "purescript-http-server-ip",
+  "description": "bouzuya/w010 2019-W22",
+  "version": "0.0.0",
+  "author": "bouzuya <m@bouzuya.net> (https://bouzuya.net/)",
+  "bugs": {
+    "url": "https://github.com/bouzuya/purescript-http-server-ip/issues"
+  },
+  "devDependencies": {
+    "purescript": "^0.12.5",
+    "spago": "^0.8.1"
+  },
+  "homepage": "https://github.com/bouzuya/purescript-http-server-ip#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bouzuya/purescript-http-server-ip.git"
+  },
+  "scripts": {
+    "build": "spago build",
+    "purs": "purs",
+    "repl": "spago repl",
+    "spago": "spago",
+    "test": "spago test"
+  }
+}
