@@ -7,6 +7,7 @@ You can edit this file as you like.
 , dependencies =
     [ "arraybuffer"
     , "bouzuya-http-server"
+    , "node-process"
     , "psci-support"
     , "simple-json"
     , "test-unit"
