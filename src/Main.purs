@@ -19,15 +19,14 @@ import Effect.Class as Class
 import Effect.Console as Console
 import Node.Process as Process
 
-html :: String -> Effect Response
-html =
+text :: String -> Effect Response
+text =
   Response.response
     StatusCode.status200
-    [ Tuple.Tuple "Content-Type" "text/html" ]
+    [ Tuple.Tuple "Content-Type" "text/plain" ]
 
 app :: Request -> Aff Response
-app { remoteAddress: { host } } = do
-  Class.liftEffect (html host)
+app { remoteAddress: { host } } = Class.liftEffect (text host)
 
 main :: Effect Unit
 main = do
