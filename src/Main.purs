@@ -10,7 +10,6 @@ import Bouzuya.HTTP.Response as Response
 import Bouzuya.HTTP.Server as Server
 import Bouzuya.HTTP.StatusCode as StatusCode
 import Control.Bind (bindFlipped)
-import Data.Foldable as Foldable
 import Data.Int as Int
 import Data.Maybe as Maybe
 import Data.Tuple as Tuple
@@ -27,14 +26,7 @@ html =
     [ Tuple.Tuple "Content-Type" "text/html" ]
 
 app :: Request -> Aff Response
-app { headers } = do
-  -- TODO: request.remoteAddress
-  let
-    host =
-      Maybe.maybe
-        "unknown"
-        Tuple.snd
-        (Foldable.find ((eq "host") <<< Tuple.fst) headers)
+app { remoteAddress: { host } } = do
   Class.liftEffect (html host)
 
 main :: Effect Unit
