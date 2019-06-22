@@ -41,4 +41,8 @@ main :: Effect Unit
 main = do
   portMaybe <- map (bindFlipped Int.fromString) (Process.lookupEnv "PORT")
   let config = { host: "0.0.0.0", port: Maybe.fromMaybe 8080 portMaybe }
-  Server.run config (\_ -> Console.log "listen") app
+  Server.run
+    config
+    (\{ host, port } ->
+      Console.log ("listen: http://" <> host <> ":" <> (show port)))
+    app
